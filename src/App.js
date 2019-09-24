@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+
+import Data from "./data";
+
 // STEP 4 - import the button and display components
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
+import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
+import Display from "./components/DisplayComponents/Display";
 // Don't forget to import any extra css/scss files you build into the correct component
 
 // Logo has already been provided for you. Do the same for the remaining components
@@ -13,14 +20,79 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+  const [displayValue, setDisplayValue] = useState(0);
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
+        <div>
+          <Display value={displayValue} />
+        </div>
+        <div>
+          <div>
+            <Specials clickHandler={clickHandler} specials={Data.specials} setDisplayValue={setDisplayValue} />
+            <Numbers clickHandler={clickHandler} numbers={Data.numbers} setNumberState={setNumberState} setDisplayValue={setDisplayValue} />
+          </div>
+          <div>
+            <Operators clickHandler={clickHandler} operators={Data.operators} setDisplayValue={setDisplayValue} />
+          </div>
+        </div>
       </div>
     </div>
   );
+}
+
+function setNumberState(props) {
+  //TODO
+  return null;
+}
+
+function clickHandler(input) {
+  switch (input) {
+    case "0":
+      break;
+    case "1":
+      break;
+    case "2":
+      break;
+    case "3":
+      break;
+    case "4":
+      break;
+    case "5":
+      break;
+    case "6":
+      break;
+    case "7":
+      break;
+    case "8":
+      break;
+    case "9":
+      break;
+    case ".":
+      break;
+    case "/":
+      break;
+    case "x":
+      break;
+    case "-":
+      break;
+    case "+":
+      break;
+    case "=":
+      break;
+    case "C":
+      break;
+    case "+/-":
+      break;
+    case "%":
+      break;
+    default:
+      // alert("Invalid input!");
+  }
+  setNumberState();
 }
 
 export default App;
