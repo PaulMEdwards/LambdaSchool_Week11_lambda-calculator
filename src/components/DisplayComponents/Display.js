@@ -4,7 +4,7 @@ const Display = (props) => {
   return (
     <div className="display">
       {/* Display any props data here */}
-      { props.value }
+      <span className="display-text">{ props.value }</span>
     </div>
   );
 };

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 
+// STEP 0 - import data once here instead of thrice within below components for efficiency.
 import Data from "./data";
 
 // STEP 4 - import the button and display components
+import Display from "./components/DisplayComponents/Display";
 import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
-import Display from "./components/DisplayComponents/Display";
 // Don't forget to import any extra css/scss files you build into the correct component
 
 // Logo has already been provided for you. Do the same for the remaining components
@@ -31,12 +32,18 @@ function App() {
           <Display value={displayValue} />
         </div>
         <div>
-          <div>
-            <Specials clickHandler={clickHandler} specials={Data.specials} setDisplayValue={setDisplayValue} />
-            <Numbers clickHandler={clickHandler} numbers={Data.numbers} setNumberState={setNumberState} setDisplayValue={setDisplayValue} />
-          </div>
-          <div>
-            <Operators clickHandler={clickHandler} operators={Data.operators} setDisplayValue={setDisplayValue} />
+          <div className="group">
+            <div className="group group-left">
+              <div className="group group-specials">
+                <Specials clickHandler={clickHandler} specials={Data.specials} setDisplayValue={setDisplayValue} />
+              </div>
+              <div className="group group-numbers">
+                <Numbers clickHandler={clickHandler} numbers={Data.numbers} setNumberState={setNumberState} setDisplayValue={setDisplayValue} />
+              </div>
+            </div>
+            <div className="group group-right">
+              <Operators clickHandler={clickHandler} operators={Data.operators} setDisplayValue={setDisplayValue} />
+            </div>
           </div>
         </div>
       </div>

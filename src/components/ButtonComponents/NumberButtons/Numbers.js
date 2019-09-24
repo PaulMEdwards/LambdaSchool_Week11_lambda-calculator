@@ -17,7 +17,7 @@ const Numbers = (props) => {
   const [numbersData] = useState(numbers);
 
   return (
-    <div>
+    <React.Fragment>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
           component matching the name on the provided file.
           Pass it any props needed by the child component. */}
@@ -26,7 +26,7 @@ const Numbers = (props) => {
           return (<NumberButton number={number} clickHandler={clickHandler} setNumberState={setNumberState} />);
         })
       }
-    </div>
+    </React.Fragment>
   );
 };
 

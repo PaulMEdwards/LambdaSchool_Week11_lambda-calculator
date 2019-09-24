@@ -13,7 +13,7 @@ const Operators = (props) => {
   const [operatorsData] = useState(operators);
 
   return (
-    <div>
+    <React.Fragment>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
           component matching the name on the provided file.
           Pass it any props needed by the child component. */}
@@ -25,7 +25,7 @@ const Operators = (props) => {
           return (<OperatorButton operatorChar={char} operatorValue={value} clickHandler={clickHandler} />);
         })
       }
-    </div>
+    </React.Fragment>
   );
 };
 
