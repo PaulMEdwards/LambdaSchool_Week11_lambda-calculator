@@ -23,7 +23,7 @@ const Numbers = (props) => {
           Pass it any props needed by the child component. */}
       {
         numbersData.map((number) => {
-          return (<NumberButton number={number} clickHandler={clickHandler} setNumberState={setNumberState} />);
+          return (<NumberButton number={number} clickHandler={clickHandler} setNumberState={setNumberState} setDisplayValue={setDisplayValue} />);
         })
       }
     </React.Fragment>

@@ -19,7 +19,7 @@ const Specials = (props) => {
           Pass it any props needed by the child component. */}
       {
         specialsData.map((special) => {
-          return (<SpecialButton special={special} clickHandler={clickHandler} />);
+          return (<SpecialButton special={special} clickHandler={clickHandler} setDisplayValue={setDisplayValue} />);
         })
       }
     </React.Fragment>

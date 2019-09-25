@@ -22,7 +22,7 @@ const Operators = (props) => {
           const char = operator.char;
           const value = operator.value;
 
-          return (<OperatorButton operatorChar={char} operatorValue={value} clickHandler={clickHandler} />);
+          return (<OperatorButton operatorChar={char} operatorValue={value} clickHandler={clickHandler} setDisplayValue={setDisplayValue} />);
         })
       }
     </React.Fragment>

@@ -49,57 +49,59 @@ function App() {
       </div>
     </div>
   );
-}
 
-function setNumberState(props) {
-  //TODO
-  return null;
-}
-
-function clickHandler(input) {
-  switch (input) {
-    case "0":
-      break;
-    case "1":
-      break;
-    case "2":
-      break;
-    case "3":
-      break;
-    case "4":
-      break;
-    case "5":
-      break;
-    case "6":
-      break;
-    case "7":
-      break;
-    case "8":
-      break;
-    case "9":
-      break;
-    case ".":
-      break;
-    case "/":
-      break;
-    case "x":
-      break;
-    case "-":
-      break;
-    case "+":
-      break;
-    case "=":
-      break;
-    case "C":
-      break;
-    case "+/-":
-      break;
-    case "%":
-      break;
-    default:
-      // alert("Invalid input!");
+  function setNumberState(props) {
+    setDisplayValue(props.input);
   }
-  setNumberState();
+  
+  function clickHandler(input) {
+    //Prevent Default event to avoid logging to console on init.
+    console.log(input);
+    switch (input) {
+      case "0":
+        console.log('zero');
+        break;
+      case "1":
+        break;
+      case "2":
+        break;
+      case "3":
+        break;
+      case "4":
+        break;
+      case "5":
+        break;
+      case "6":
+        break;
+      case "7":
+        break;
+      case "8":
+        break;
+      case "9":
+        break;
+      case ".":
+        break;
+      case "/":
+        break;
+      case "x":
+        break;
+      case "-":
+        break;
+      case "+":
+        break;
+      case "=":
+        break;
+      case "C":
+        break;
+      case "+/-":
+        break;
+      case "%":
+        break;
+      default:
+        // alert("Invalid input!");
+    }
+    setNumberState(input);
+  }
 }
 
 export default App;
